@@ -1,0 +1,18 @@
+1) 
+CREATE TABLE Dept(
+    Dept_ID number(7) NOT NULL,
+    Dept_Name Varchar2(20),
+    PRIMARY KEY (Dept_ID)
+);
+
+2) 
+INSERT INTO DEPT
+SELECT depertment_id, depertment_name
+from depertments
+where depertment_id=10 AND depertment_name='Accounts';
+
+3) 
+create table Emp ( ID number(7),Last_Name varchar2(25)  not null,
+First_Name varchar(25), Dept_ID number, primary key(ID), foreign key(Dept_ID)
+reference Dept
+);
